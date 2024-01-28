@@ -1,45 +1,54 @@
-html{
-    background: #018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
-    background-size: cover;
-    font-family: "helvetica neue";
-    text-align: center;
-    font-size: 10px;
-}
-body{
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+*{
     margin: 0;
-    font-size: 2rem;
-    display: flex;
-    flex: 1;
-    min-height: 100vh;
-    align-items: center;
+    padding: 0;
 }
-.clock{
-    width: 30rem;
-    height: 30rem;
-    border: 20px solid white;
-    border-radius: 50%;
-    margin: 50px auto;
+html, body{
+    display: grid;
+    place-items: center;
+}
+#dayIntro{
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    border: 7px solid rgb(17, 129, 134);
+    border-radius: 10PX;
+    margin: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    background: linear-gradient(180deg, #a8b9d3, rgb(173, 227, 229));
+}
+.container{
+    height: 120px;
+    width: 550px;
     position: relative;
-    padding: 2rem;
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1),
-    inset 0 0 0 3px #EFEFEF,
-    inset 0 0 10px black,
-    0 0 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    border-radius: 10px;
+    cursor: default;
 }
-.clock-face{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform: translateY(-3px);
-}
-.hand{
-    width: 50%;
-    height: 6px;
-    background: black;
+.container .dispClock, .container{
     position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .dispClock{
     top: 50%;
-    transform-origin: 100%;
-    transform: rotate(90deg);
-    transition: all 0.05s;
-    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    height: 105px;
+    width: 535px;
+    background: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+    border-radius: 6px;
+    text-align: center;
+}
+.dispClock #time{
+    line-height: 85px;
+    color: #fff;
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
